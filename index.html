@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect x='2' y='2' width='44' height='44' rx='14' fill='%23c7b8fa'/%3E%3Ctext x='24' y='32' text-anchor='middle' font-family='Arial' font-weight='900' font-size='22' fill='%233b2f7a'%3EGP%3C/text%3E%3C/svg%3E">
+<title>AuditSure by Gaurav Patil · Payroll Audit Portal</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#e4f2ff;--card:rgba(255,255,255,.62);--tx:#10203f;--mu:#5a6b8c;--bd:#cfe3f5;--soft:rgba(255,255,255,.55);--gdt:#9a7414;--ok:#0f7a55;--okb:#e5f6ee;--wn:#8a5a00;--wnb:#fff3d6;--er:#c0362c;--erb:#fde8e5;--sh:0 10px 34px -12px rgba(30,90,160,.28);--gold:linear-gradient(135deg,#f2d37a,#d6a93c);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.55 'Plus Jakarta Sans',system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-variant-numeric:tabular-nums}
+.hero{position:relative;overflow:hidden;color:#fff;padding:22px 18px 110px;background:radial-gradient(900px 380px at 85% -10%,rgba(255,244,200,.35),transparent 60%),radial-gradient(700px 400px at -10% 110%,rgba(255,228,150,.25),transparent 60%),linear-gradient(160deg,#a67c00,#8f6a00 45%,#5c4000)}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:3px;background:linear-gradient(90deg,#fff6d6,#f3d98b,#fff6d6)}
+.in{max-width:1100px;margin:0 auto;position:relative}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:40px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px}
+.mk{display:grid;place-items:center;flex:none;width:48px;height:48px;border-radius:15px;font:800 1.15rem/1 inherit;letter-spacing:-.04em;color:#fff;background:linear-gradient(120deg,#6366f1,#a855f7,#ec4899,#f97316,#eab308,#10b981,#06b6d4,#6366f1);background-size:300% 100%;animation:bs 7s linear infinite;box-shadow:0 14px 26px -10px rgba(124,92,255,.75),inset 0 1px 0 rgba(255,255,255,.55)}
+.cc{font-weight:800;letter-spacing:.06em;font-size:1.15rem;line-height:1.1;background:linear-gradient(100deg,#6366f1,#a855f7,#ec4899,#f97316,#eab308,#10b981,#06b6d4,#6366f1);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:bs 6s linear infinite}
+@keyframes bs{to{background-position:200% 0}}
+.set{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-top:14px}.set label{font-size:.8rem;font-weight:700;color:var(--mu)}.set input{display:block;width:100%;margin-top:4px;padding:9px 11px;border:1.5px solid var(--bd);border-radius:12px;background:var(--soft);color:var(--tx);font:600 .95rem inherit}.cr td{font-size:.84rem}
+.by{font-size:.68rem;letter-spacing:.2em;color:#fff1c2;margin-top:3px}
+.pill{font-size:.78rem;font-weight:600;color:#fff6d6;border:1px solid rgba(255,246,214,.7);border-radius:99px;padding:6px 14px;background:rgba(255,255,255,.07)}
+h1{font:800 clamp(2rem,5.6vw,3.2rem)/1.1 inherit;margin:0 0 14px;letter-spacing:-.01em}
+.gold{background:var(--gold);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.lead{max-width:600px;margin:0;color:rgba(255,255,255,.78);font-size:1.05rem}
+main{max-width:1100px;margin:-78px auto 0;padding:0 14px 30px;position:relative}
+.ups{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+@media(max-width:800px){.ups{grid-template-columns:1fr}}
+.card{background:var(--card);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid var(--bd);border-top:3px solid #d4af37;border-radius:18px;padding:18px;box-shadow:var(--sh)}
+.slot{position:relative}.slot:focus-within{outline:2px solid #d4af37;outline-offset:2px}
+.slot input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.ico{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-weight:800;color:#0a1628;background:linear-gradient(160deg,#e2bb4a,#a67c00);box-shadow:0 0 0 4px rgba(255,248,225,.9);margin-bottom:10px}
+.slot b{display:block;font-size:1.05rem}.slot small{display:block;color:var(--mu);margin:4px 0 12px}
+.drop{border:2px dashed #cfa93a;border-radius:14px;padding:14px;text-align:center;background:var(--soft);font-size:.88rem;color:var(--mu);word-break:break-all}
+.slot:hover .drop{border-color:#a67c00}
+.full .drop{border-style:solid;color:var(--ok);background:var(--okb);font-weight:700}
+.act{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin:20px 0 8px}
+.btn{position:relative;overflow:hidden;font:700 1.02rem inherit;border:0;border-radius:14px;padding:14px 36px;background:var(--gold);color:#0a1628;cursor:pointer;box-shadow:0 10px 24px -10px rgba(185,138,18,.8)}
+.btn::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:sh 3.2s infinite}
+@keyframes sh{to{left:140%}}
+.btn:disabled{opacity:.45;cursor:not-allowed;box-shadow:none}.btn:disabled::after{display:none}
+.btn:focus-visible,.chip:focus-visible,.dl:focus-visible{outline:2px solid var(--tx);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){.mk,.cc,.btn::after{animation:none}}
+.msg{color:var(--mu);font-size:.9rem}.msg.e{color:var(--er);font-weight:700}
+.rules{font-size:.84rem;color:var(--mu);margin:0 0 18px;max-width:100ch}
+.sum{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.sc{background:var(--soft);border:1px solid var(--bd);border-radius:14px;padding:14px;text-align:center}
+.sc b{display:block;font-size:1.7rem;line-height:1.2;font-weight:800;color:var(--gdt)}.sc span{font-size:.8rem;color:var(--mu)}
+.panel{padding:0;overflow:hidden}
+.note{padding:10px 16px;font-size:.85rem;color:var(--mu);border-bottom:1px solid var(--bd)}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:10px 16px;border-bottom:1px solid var(--bd)}
+.bar input{flex:1;min-width:150px;max-width:260px;padding:8px 12px;border:1.5px solid var(--bd);border-radius:12px;background:var(--soft);color:var(--tx);font:inherit;outline:0}
+.bar input:focus{border-color:#d4af37}
+.chip{border:1.5px solid var(--bd);background:transparent;color:var(--tx);border-radius:99px;padding:4px 14px;font:600 .85rem inherit;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--gold);color:#0a1628;border-color:transparent}
+.dl{margin-left:auto;background:var(--gold);border:0;color:#0a1628;border-radius:12px;padding:9px 18px;font:700 .9rem inherit;cursor:pointer}
+.ts{overflow:auto;max-height:68vh}
+table{border-collapse:collapse;width:100%;font-size:.87rem}
+th{position:sticky;top:0;background:#1b2c4a;color:#f6dc8d;text-align:left;padding:10px;font-weight:700;white-space:nowrap}
+td{padding:8px 10px;border-bottom:1px solid var(--bd);vertical-align:top}
+.r{text-align:right;white-space:nowrap}
+td.ok{background:var(--okb);color:var(--ok)}td.wn{background:var(--wnb);color:var(--wn)}td.bd{background:var(--erb);color:var(--er)}td.na{color:var(--mu)}
+td small{display:block;color:var(--mu);font-weight:400}td.ok small,td.wn small,td.bd small{color:inherit;opacity:.8}td b.m{display:inline-block;width:1.2em;font-weight:800}
+footer{max-width:1100px;margin:10px auto 0;padding:22px 18px 28px;border-top:1px solid var(--bd);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.85rem;color:var(--mu)}
+footer b{color:var(--tx)}
+
+:root{--gold:linear-gradient(120deg,#ffd9a8,#ffc2dc,#d9c8ff,#b8e2ff,#c4f3da,#ffd9a8);--gdt:#4f46e5}
+body{background:#eaf2ff}
+body::before{content:"";position:fixed;inset:0;background:linear-gradient(120deg,#cfe0ff 0%,#e4d4ff 18%,#ffd6ec 36%,#ffe7c7 52%,#d5f7e6 68%,#c9efff 84%,#cfe0ff 100%);background-size:400% 400%;animation:bg2 16s ease infinite;pointer-events:none;z-index:0}
+body::after{content:"";position:fixed;inset:0;background:radial-gradient(circle at 15% 8%,rgba(255,255,255,.75),transparent 45%),radial-gradient(circle at 85% 92%,rgba(255,255,255,.55),transparent 45%);pointer-events:none;z-index:0}
+@keyframes bg2{0%,100%{background-position:0 50%}50%{background-position:100% 50%}}
+.hero,main,footer{position:relative;z-index:1}
+.hero{background:none;color:var(--tx)}.hero::after{display:none}
+.lead,.by{color:var(--mu)}
+.pill{color:#3b2f7a;border:1px solid rgba(255,255,255,.95);background:rgba(255,255,255,.65)}
+.mk{background:linear-gradient(120deg,#cfe0ff,#e4d4ff,#ffd6ec,#ffe7c7,#d5f7e6,#c9efff,#cfe0ff);background-size:300% 100%;color:#3b2f7a;box-shadow:0 0 0 3px rgba(255,255,255,.9),0 10px 22px -8px rgba(120,110,200,.55)}
+.gold{background:linear-gradient(120deg,#6366f1,#a855f7,#ec4899,#f97316,#14b8a6,#6366f1);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:bs 9s ease infinite}
+.card{border-top:1px solid var(--bd);background:linear-gradient(145deg,rgba(255,255,255,.85),rgba(255,255,255,.6))}
+.ico{background:var(--gold);color:#2a2352;box-shadow:0 0 0 4px rgba(255,255,255,.9),0 8px 18px -8px rgba(150,120,255,.6)}
+.drop{border-color:#b9a8f5}.slot:hover .drop,.bar input:focus{border-color:#8b7cf6}.slot:focus-within{outline-color:#8b7cf6}
+.btn,.dl,.chip[aria-pressed="true"]{color:#2a2352;box-shadow:0 10px 24px -10px rgba(150,120,255,.6)}
+.btn,.dl{background-size:300% 100%;animation:bs 8s ease infinite}
+th{background:#e9eeff;color:#3b2f7a}
+@media(prefers-reduced-motion:reduce){body::before,.gold,.btn,.dl{animation:none}}
+
+.pill::first-letter{color:#10b981}
+.tr{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.tr span{font-size:.8rem;font-weight:600;color:#3b2f7a;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.95);border-radius:99px;padding:5px 12px}
+details.rates{margin-top:14px;padding:14px 18px}details.rates summary{cursor:pointer;font-weight:700}details.rates .set{margin-top:12px}details.rates p{margin:10px 0 0}
+.how{padding:18px 22px}.how ol{margin:8px 0 0 18px;padding:0;color:var(--mu)}.how li{margin:4px 0}
+.top3{display:flex;gap:14px;align-items:stretch;margin-bottom:14px;flex-wrap:wrap}.top3 .sum{flex:1;margin:0;min-width:260px}
+.ring{background:linear-gradient(145deg,rgba(255,255,255,.88),rgba(255,255,255,.62));border:1px solid var(--bd);border-radius:14px;padding:10px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:var(--sh)}.ring small{color:var(--mu);font-size:.78rem;font-weight:600}
+</style></head><body>
+<header class="hero"><div class="in">
+<div class="nav"><div class="brand"><span class="mk">GP</span><div><div class="cc">GAURAV PATIL</div><div class="by">AUDITSURE · PAYROLL COMPLIANCE</div></div></div><span class="pill">● Live · Maharashtra</span></div>
+<h1>Every wage. Every record. <span class="gold">Audit-ready.</span></h1>
+<p class="lead">Check your wage sheet against the PF ECR, ESIC file and bank statements, and get a Maharashtra labour-law compliance report you can hand straight to the auditor.</p>
+<div class="tr"><span>Runs in your browser</span><span>Files never uploaded</span><span>Rates verified 17 Nov 2026</span><span>Excel report included</span></div>
+</div></header>
+<main>
+<section class="ups" id="side"></section>
+<section class="card set"><label>Wage month<input type="month" id="mo"></label><label>PF wage ceiling ₹<input type="number" id="pfc"></label><label>Minimum wage, Basic + DA, ₹ per month<input type="number" id="mw" placeholder="enter to check"></label><label>Max OT hours per month<input type="number" id="otl" value="38"></label><label>Statement pay amount column<input type="text" id="pc" value="FILE_PAY_AMT"></label></section>
+<div class="act"><button class="btn" id="go" disabled>Run audit</button><span class="msg" id="st">Add the wage sheet workbook to begin.</span></div>
+<details class="card rates"><summary>Statutory rates and limits (editable)</summary><div class="set"><label>PF rate %<input type="number" id="rpf" value="12" step="0.01"></label><label>ESIC employee rate %<input type="number" id="resic" value="0.75" step="0.01"></label><label>ESIC wage ceiling ₹<input type="number" id="ecl" value="21000"></label><label>LWF employee ₹ (June, December)<input type="number" id="rlwf" value="25"></label><label>PT regular month ₹<input type="number" id="rpt" value="200"></label><label>PT February ₹<input type="number" id="rptf" value="300"></label><label>Bonus minimum %<input type="number" id="rbon" value="8.33" step="0.01"></label></div><p class="msg">Defaults are the rates verified on 17 Nov 2026. If the law changes, change the value here and run again.</p></details>
+<p class="rules">PF ECR is matched on UAN and the ESIC file on the ESIC No (IP number). Bank statements are matched on name only (spaces and Mr./Mrs. ignored). The wage sheet Net and the Statement Net are shown side by side, so you can compare them yourself. The statement amount is taken from the matched line, treating the last number on a line as the balance. The matched bank line is shown under each result so you can verify it. If the statement file has a FILE_PAY_AMT column, that amount is used as the Statement Net, and Responsibility For Payment Of Wages compares only the wage sheet Net with it. Maharashtra compliance checks: PF is checked on the earned (actual) values, never the fixed salary columns: PF wages = Total Gross − HRA − Attendance Bonus − Statutory Bonus − Total OT, at 12%, up to the PF ceiling (₹25,000 from 17 Sep 2026, ₹15,000 before). ESIC is 0.75% up to ₹21,000 gross. PT is read from the PT column using the Maharashtra slabs (₹300 in February). LWF is ₹25 in June and December. Minimum wage is checked on the fixed basic wage (plus fixed DA if it has its own column), which is the monthly wage rate, against the slab you enter. Earned basic is not used for this check, so part-month employees are not flagged. If the sheet has no fixed basic column, earned basic is used. OT limit: 38 hours a month (115 per quarter).</p>
+<section id="out"><div class="card how"><b>How it works</b><ol><li>Add your wage sheet workbook (required).</li><li>Add the PF ECR, ESIC file or bank statements if you want them checked (optional).</li><li>Run the audit, review the compliance report, then download the Excel.</li></ol></div></section>
+</main>
+<footer><span>© 2026 <b>Gaurav Patil</b>. <b>AuditSure</b> · Every wage. Every record. Audit-ready.</span><span>Designed &amp; developed by <b>GAURAV PATIL</b></span></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.4.0/exceljs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+try{pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js'}catch(e){}
+const $=s=>document.querySelector(s),S={w:[],e:[],i:[],b:[]};let STN=[],CR=[],CN='',R=[],XU=[],XS=[],SR=[],IMG=[],flt='all',q='';
+const SL=[['w','1','Wage sheet workbook','Required. Every sheet is read. Each needs name, UAN and net salary columns.','.xlsx,.xls',0],['e','2','PF ECR','Optional. If added, the UAN in the wage sheet is checked against it. PDF or ECR text file.','.pdf,.txt,.csv,.xlsx',0],['i','3','ESIC contribution file','Optional. If added, the ESIC No in the wage sheet is checked against it. PDF, Excel or text file.','.pdf,.xlsx,.xls,.csv,.txt',0],['b','4','Bank statements','Optional. If added, names and pay amounts are checked. PDF or Excel. Images are listed, not read.','.pdf,.xlsx,.xls,.csv,.png,.jpg,.jpeg,.webp',1]];
+$('#side').innerHTML=SL.map(s=>`<label class="card slot" id="sl-${s[0]}"><div class="ico">${s[1]}</div><b>${s[2]}</b><small>${s[3]}</small><div class="drop" id="fn-${s[0]}">Click or drop a file</div><input type="file" accept="${s[4]}" ${s[5]?'multiple':''} data-k="${s[0]}" aria-label="${s[2]}"></label>`).join('');
+document.querySelectorAll('input[type=file]').forEach(i=>i.onchange=()=>{const k=i.dataset.k;S[k]=[...i.files];if(k=='w'&&S.w[0]){const mm=S.w[0].name.match(/(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*[\s_\-]*(\d{4})/i);if(mm){$('#mo').value=mm[2]+'-'+String('janfebmaraprmayjunjulaugsepoctnovdec'.indexOf(mm[1].toLowerCase())/3+1).padStart(2,'0');upd()}}$('#fn-'+k).textContent=S[k].map(f=>f.name).join(', ')||'Click or drop a file';$('#sl-'+k).classList.toggle('full',!!S[k].length);$('#go').disabled=!S.w.length});
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const rs=n=>'₹'+Number(n).toLocaleString('en-IN');
+const TIT=/\b(MR|MRS|MS|MISS|SHRI|SHREE|SMT|SHRIMATI|KUMARI|DR)\b/g;
+const sq=s=>String(s||'').toUpperCase().replace(TIT,' ').replace(/[^A-Z]/g,'');
+const rd=f=>new Promise((r,j)=>{const x=new FileReader();x.onload=e=>r(e.target.result);x.onerror=j;x.readAsArrayBuffer(f)});
+const num=v=>{const n=parseFloat(String(v).replace(/[₹,\s]/g,''));return isNaN(n)?null:n};
+async function sheets(f){const wb=XLSX.read(await rd(f),{type:'array'});return wb.SheetNames.map(n=>({n,r:XLSX.utils.sheet_to_json(wb.Sheets[n],{header:1,defval:''})}))}
+function emp(sh){const A=sh.r;for(let i=0;i<Math.min(A.length,25);i++){const h=A[i].map(c=>String(c).toLowerCase().trim());
+ const ni=h.findIndex(c=>/name/.test(c)&&!/father|husband|bank|branch|account|a\/c/.test(c));
+ const nd=c=>!/day|hrs|hour/.test(c);let vi=h.findIndex(c=>nd(c)&&/net\s*(pay|salary|wage|amount)|take\s*home|net\s*payable|^net$/.test(c));if(vi<0)vi=h.findIndex(c=>nd(c)&&/net/.test(c));if(vi<0)vi=h.findIndex(c=>nd(c)&&/payable/.test(c));
+ if(ni<0||vi<0)continue;const ui=h.findIndex(c=>/uan|pf\s*(no|num|a\/c)|epf\s*(no|num)|member\s*id/.test(c)),o=[],nx=(A[i+1]||[]).map(c=>String(c).toLowerCase().trim()),sb=nx.filter(c=>c&&num(c)===null).length>=3&&!nx.some(c=>c&&num(c)!==null),gf=(l=>h.map(c=>(l=c||l)))(''),hh=h.map((c,j)=>((gl(A,i)[j]||'')+' '+(sb&&nx[j]?gf[j]+' '+nx[j]:c)).trim()),X=cols(hh);o.cm=Object.entries(X).map(([k,q])=>k+': '+(q<0?'NOT FOUND':hh[q])).join(' | ');
+ for(let k=i+1+(sb?1:0);k<A.length;k++){const nm=String(A[k][ni]).trim(),nt=num(A[k][vi]);if(!sq(nm)||/total/i.test(nm)||nt===null)continue;o.push({x:cv(A[k],X),name:nm,sq:sq(nm),uan:ui<0?'':String(A[k][ui]).replace(/\D/g,''),nu:ui<0,net:nt,sheet:sh.n,row:k+1})}
+ return o}return null}
+async function lines(f){const n=f.name.toLowerCase();
+ if(/\.pdf$/.test(n)){const d=await pdfjsLib.getDocument({data:await rd(f)}).promise,L=[];
+  for(let p=1;p<=d.numPages;p++){const c=await(await d.getPage(p)).getTextContent(),m=new Map();
+   c.items.forEach(t=>{if(!t.str.trim())return;const y=Math.round(t.transform[5]/3);if(!m.has(y))m.set(y,[]);m.get(y).push([t.transform[4],t.str])});
+   [...m.entries()].sort((a,b)=>b[0]-a[0]).forEach(([,v])=>L.push(v.sort((a,b)=>a[0]-b[0]).map(x=>x[1]).join(' ')))}return L}
+ if(/\.(xlsx|xls|csv)$/.test(n))return(await sheets(f)).flatMap(s=>s.r.map(r=>r.join(' ')));
+ return new TextDecoder().decode(await rd(f)).split(/\r?\n/)}
+const C=(s,t)=>({s,t});
+const amts=l=>{const t=String(l||'').replace(/\b\d{1,2}[\/\-.](?:\d{1,2}|[A-Za-z]{3,9})[\/\-.]\d{2,4}\b/g,' ').replace(/\b\d{1,2}[\s-]?(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*[\s,.-]*\d{0,4}\b/gi,' ').replace(/\d{9,}/g,' '),d=(t.match(/\d{1,3}(?:,\d{2,3})*\.\d{1,2}\b|\d+\.\d{1,2}\b/g)||[]).map(num).filter(n=>n>0);return d.length?d:(t.match(/\b\d{1,3}(?:,\d{2,3})+\b|\b\d{4,8}\b/g)||[]).map(num).filter(n=>n>=3000)};
+function bank(e,BL,BS,BP){const H=[];if(e.sq.length>=3)BS.forEach((l,i)=>{if(l.includes(e.sq))H.push(i)});
+ if(!H.length)return{c:C('bd','Name not found in bank'),amt:null,line:''};
+ const FQ=H.filter(i=>BP[i]!=null);if(FQ.length){const k=FQ.find(i=>Math.abs(BP[i]-e.net)<=1),i=k!==undefined?k:FQ[0];return{c:C('ok','Name found'),amt:BP[i],line:BL[i].trim()}}
+ const AM=i=>{const a=amts(BL[i]);return a.length?a:amts(BL[i+1])},NB=i=>[i-1,i,i+1,i+2].flatMap(j=>amts(BL[j])),mt=a=>Math.abs(a-e.net)<=1;
+ let pk=H.find(i=>NB(i).some(mt)),a;
+ if(pk!==undefined)a=NB(pk).find(mt);else{pk=H[0];let A=AM(pk);if(A.length>1)A=A.slice(0,-1);a=A.length?A[0]:null}
+ return{c:C('ok','Name found'),amt:a,line:BL[pk].trim()}}
+
+const cols=h=>{const NF=/fix|rate|per\s*day|\/day|std\b|standard|master|billing|employer|pf details|ctc|grand|absorption/,ER=/earn|actual|paid/,f=(re,ex)=>h.findIndex(c=>re.test(c)&&!(ex&&ex.test(c))),
+ e=(re,ex)=>{const a=[];h.forEach((c,i)=>{if(re.test(c)&&!NF.test(c)&&!(ex&&ex.test(c)))a.push(i)});const q=a.filter(i=>ER.test(h[i]));return q.length?q[q.length-1]:a.length?a[a.length-1]:-1};
+ return{basic:e(/basic/,/day|hrs|hour/),da:e(/\bda\b|d\.a\b|dearness/,/basic/),gross:e(/gross/,/ded|day/),hra:e(/\bhra\b|house\s*rent/),att:e(/att(end\w*|\.)?\s*(bonus|allow)/),bonus:e(/bonus/,/att/),pf:f(/\b(epf|pf)\b|provident/,/uan|no\.?$|number|wage|employer|\ber\b|a\/c|admin|eps|edli|8\.33|3\.67/),esic:f(/\b(esi|esic)\b/,/employer|\ber\b|wage|\bip\b|no\.?$|number/),pt:f(/(^|[^a-z])(pt|p\.?\s?t\.?)($|[^a-z])|prof[a-z.]*\s*tax|(^|[^a-z])p\.?\s?tax|ptax/),lwf:f(/lwf|welfare/),oth:f(/\bot\b[^/]*\b(hrs|hours)\b|overtime[^/]*\b(hrs|hours)\b/),ota:e(/\bot\b|overtime/,/hr|hour|rate/),ded:f(/total.*ded|ded.*total|gross.*ded/),days:f(/paid\s*days|days\s*paid|payable\s*days|days\s*payable|^days$|present\s*days/),sex:f(/gender|sex/),fg:f(/^total gross$|fix\w*\s*gross|gross\s*fix/),esn:f(/esic?\s*no|esi\s*no|\bip\s*(no|number)/),fbasic:f(/fix\w*[^/]*basic|basic[^/]*fix/),fda:f(/fix\w*[^/]*(\bda\b|dearness)/)}};
+const gl=(A,i)=>{const pr=i>0?A[i-1].map(c=>String(c).toLowerCase().trim()):[],g=[];if(pr.filter(Boolean).length>1){let l='';pr.forEach((c,j)=>{if(c)l=c;g[j]=l})}return g};
+const cv=(r,X)=>{const o={};for(const k in X)if(X[k]>=0)o[k]=(k=='sex'||k=='esn')?String(r[X[k]]):(num(r[X[k]])||0);return o};
+const RW=[['pf','Employees Provident Fund','PF contribution on Gross Salary','PF at 12% on PF wages (Gross - HRA - Attendance Bonus - Statutory Bonus - Total OT)'],['uan','Employees Provident Fund','Submission of Form 11 / UAN','A valid 12 digit UAN for every PF member'],['ecr','Employees Provident Fund','ECR','To generate ECR for all P.F members'],['esic','The Employee State Insurance Act','Contributions under ESI Act','To pay contributions at prescribed rates for all insured employees'],['esif','The Employee State Insurance Act','ESIC monthly contribution file','ESIC No of every insured employee must be in the ESIC contribution file'],['mw','Minimum Wages Act','Payment of Minimum Wages','Fixed basic wages (Basic + DA) not below the current minimum wage slab'],['ot','Minimum Wages Act','Hours of Work and Overtime Rate','OT within prescribed hours, paid at double the ordinary rate'],['net','Contract Labour Rules','Responsibility For Payment Of Wages','Wage sheet Net Salary must match the Statement FILE_PAY_AMT'],['bank','Contract Labour Rules','Mode Of Payment','Salary to be paid by cheque or bank transfer'],['bon','The Bonus Act','Payment Of Bonus','Bonus at not less than 8.33%'],['pt','The Professional Tax Act','Monthly contribution remittance','PT deducted at Maharashtra slab rates'],['lwf','The Labour Welfare Fund Act','Deductions From Wages','LWF deducted in June and December']];
+const dm=new Date();dm.setMonth(dm.getMonth()-1);$('#mo').value=dm.toISOString().slice(0,7);
+const upd=()=>{$('#pfc').value=$('#mo').value>='2026-10'?25000:15000};$('#mo').onchange=upd;upd();
+function comp(){const RT={pf:+$('#rpf').value||12,es:+$('#resic').value||.75,ec:+$('#ecl').value||21000,lw:+$('#rlwf').value||25,pt:+$('#rpt').value||200,pf2:+$('#rptf').value||300,bo:+$('#rbon').value||8.33},ym=$('#mo').value||'2026-10',m=+ym.slice(5),pfc=+$('#pfc').value||15000,mw=+$('#mw').value||0,otl=+$('#otl').value||38,F={},T=k=>F[k]=F[k]||[],L={pf:'PF',esic:'ESIC',pt:'PT',lwf:'LWF',mw:'Min wage',ot:'OT',net:'Net pay',bon:'Bonus'};let am=0;
+ R.forEach(x=>{const e=x.e,v=e.x,n=e.name,bd=(v.basic||0)+(v.da||0),G=v.gross,p=(k,t)=>{T(k).push({n,d:t});x.notes.push(L[k]+': '+t);x.st=1};
+  T('uan');if(!/^\d{12}$/.test(e.uan))F.uan.push({n,d:e.uan?'UAN '+e.uan:'UAN blank'});
+  if(x.pf){T('ecr');if(x.pf.s=='bd')F.ecr.push({n,d:x.pf.t})}
+  if(x.es){T('esif');if(x.es.s=='bd')F.esif.push({n,d:x.es.t})}
+  if(x.bk){T('bank');if(x.bk.s=='bd')F.bank.push({n,d:'Name not found in bank statement'})}
+  if('pf' in v&&(G!=null||'basic' in v)){T('pf');const hr=v.hra||0,at=v.att||0,bo=v.bonus||0,ot=v.ota||0,pw=G!=null?G-hr-at-bo-ot:bd,ex=Math.round(RT.pf/100*Math.min(pw,pfc));x.pi={G:G==null?'':G,hra:hr,att:at,bonus:bo,ota:ot,pw:Math.round(pw),pf:v.pf,ex};if(v.pf<ex-1)p('pf','PF wages '+Math.round(pw)+' (Gross '+G+' - HRA '+hr+' - Att.Bonus '+at+' - Stat.Bonus '+bo+' - OT '+ot+'), deducted '+v.pf+', should be '+ex)}
+  if('esic' in v&&G!=null){T('esic');const bs='fg' in v?v.fg:G;if(bs<=RT.ec){const ex=Math.ceil(G*RT.es/100-1e-9);if(!v.esic)p('esic','not deducted, should be '+ex+' (fixed gross '+bs+')');else if(Math.abs(v.esic-ex)>1)p('esic','deducted '+v.esic+', should be '+ex)}}
+  if('pt' in v&&G!=null){T('pt');const nm=n.trim(),f=/^(MS|MRS|MISS|SMT|KUMARI)\b/i.test(nm)||/^f/i.test(v.sex||'');if(!(/^(MR|SHRI|MS|MRS|MISS|SMT|KUMARI)\b/i.test(nm)||'sex' in v))am++;const ex=f?(G>25000?(m==2?RT.pf2:RT.pt):0):(G<=7500?0:G<=10000?175:(m==2?RT.pf2:RT.pt));x.pti={ded:v.pt,ex};if(v.pt!=ex)p('pt','deducted '+v.pt+', should be '+ex)}
+  if('lwf' in v){T('lwf');if(m==6||m==12){if(v.lwf!=RT.lw)p('lwf','deducted '+v.lwf+', should be '+RT.lw)}else if(v.lwf>0)p('lwf','deducted outside June and December')}
+  if(mw&&('fbasic' in v||'basic' in v)){T('mw');const fx='fbasic' in v,fb=fx?v.fbasic+(v.fda||0):bd,gg='fg' in v?v.fg:G;if(fb<mw-1)p('mw',(fx?'Fixed basic wages ':'Basic wages ')+fb+' below minimum '+mw+(gg>=mw?', gross '+gg+' so restructure':''))}
+  if('oth' in v&&'ota' in v&&G!=null){T('ot');if(v.oth>0){const ex=(G-v.ota)/26/8*2*v.oth;if(v.ota<ex*.95)p('ot',v.oth+' hrs paid '+v.ota+', double rate '+Math.round(ex));if(v.oth>otl)p('ot',v.oth+' hrs exceeds '+otl)}}
+  if(x.bk){T('net');if(x.bk.s=='ok'){if(x.amt==null)p('net','wage sheet Net '+e.net+', FILE_PAY_AMT not found');else if(x.d)p('net','wage sheet Net '+e.net+', statement FILE_PAY_AMT '+x.amt)}}
+  if('bonus' in v&&G!=null){T('bon');if(('fg' in v?v.fg:G)<=21000){const ex=Math.round(.01*RT.bo*Math.min(bd,Math.max(7000,mw)));if(v.bonus<ex-1)p('bon','bonus '+v.bonus+', minimum '+ex)}}
+  if(x.st)x.f='bd'});
+ CR=RW.filter(r=>F[r[0]]||!/^(ecr|esif|bank|net)$/.test(r[0])).map((r,i)=>{const a=F[r[0]];return[i+1,r[1],r[2],r[3],a?(a.length?'0':'1'):'NA',a?(a.length?'Not Complied - '+a.length+' employee(s), one per row below':'Complied'):'Not checked: matching column or file not available',a||[]]});
+ CN=am?am+' employee(s) had no gender column or Mr./Ms. title, so the male PT slab was used.':''}
+const SC=()=>{const c=CR.filter(r=>r[4]=='1').length,n=CR.filter(r=>r[4]=='0').length;return{c,n,pc:c+n?Math.round(c*100/(c+n)):0}};
+function RING(){const q=SC().pc,col=q>=80?'#10b981':q>=60?'#f59e0b':'#ef4444';return `<div class="ring"><svg viewBox="0 0 36 36" width="96" height="96" role="img" aria-label="Compliance score ${q} percent"><circle cx="18" cy="18" r="15.9" fill="none" stroke="rgba(120,110,200,.18)" stroke-width="3.6"/><circle cx="18" cy="18" r="15.9" fill="none" stroke="${col}" stroke-width="3.6" stroke-linecap="round" stroke-dasharray="${q} 100" transform="rotate(-90 18 18)"/><text x="18" y="20.6" text-anchor="middle" font-size="8.2" font-weight="800" fill="currentColor">${q}%</text></svg><small>Compliance score</small></div>`}
+function CT(){if(!CR.length)return'';const c=CR.filter(r=>r[4]=='1').length,n=CR.filter(r=>r[4]=='0').length;return `<div class="card panel" style="margin-bottom:14px"><div class="note"><b>Compliance audit, Maharashtra</b> · Complied ${c} · Not complied ${n} · Score ${c+n?Math.round(c*100/(c+n)):0}%${CN?'<br>'+esc(CN):''}</div><div class="ts cr"><table><thead><tr><th>Sr.</th><th>Act</th><th>Title</th><th>Obligation</th><th>Score</th><th>Remarks</th></tr></thead><tbody>${CR.map(r=>`<tr><td>${r[0]}</td><td>${esc(r[1])}</td><td>${esc(r[2])}</td><td>${esc(r[3])}</td><td class="${r[4]=='1'?'ok':r[4]=='0'?'bd':'na'}"><b>${r[4]}</b></td><td>${esc(r[5])}</td></tr>${r[6].map(o=>`<tr><td></td><td></td><td></td><td></td><td></td><td><b>${esc(o.n)}</b> - ${esc(o.d)}</td></tr>`).join('')}`).join('')}</tbody></table></div></div>`}
+const nz=t=>String(t).toLowerCase().replace(/[^a-z0-9]/g,'');
+const hp=c=>{const t=nz(c);if(!t)return 9;const q=nz($('#pc').value);if(q&&t.includes(q))return 0;if(/payamt|payamount|paymentamount/.test(t))return 1;if(/^(amount|amt|credit|transactionamount)$/.test(t))return 2;return 9};
+function stS(sh){let bc=-1,br=-1,bp=9;sh.r.slice(0,40).forEach((r,i)=>r.forEach((c,j)=>{const q=hp(c);if(q<bp){bp=q;bc=j;br=i}}));if(bc>=0)STN.push(String(sh.r[br][bc]).trim());return sh.r.map((r,i)=>({t:r.join(' '),a:bc>=0&&i>br?num(r[bc]):null}))}
+async function stP(f){const d=await pdfjsLib.getDocument({data:await rd(f)}).promise,o=[];let hx=null;
+ for(let p=1;p<=d.numPages;p++){const pg=await d.getPage(p),vp=pg.getViewport({scale:1}),c=await pg.getTextContent(),m=new Map();
+  c.items.forEach(t=>{if(!t.str.trim())return;const q=pdfjsLib.Util.transform(vp.transform,t.transform),y=Math.round(q[5]/3);if(!m.has(y))m.set(y,[]);m.get(y).push({x:q[4],y:q[5],w:t.width,s:t.str.trim()})});
+  const R=[...m.entries()].sort((a,b)=>a[0]-b[0]).map(([y,v])=>({y:y*3,v:v.sort((a,b)=>a.x-b.x),a:null}));let bp=9;
+  R.forEach(r=>r.v.forEach(t=>{const q=hp(t.s);if(q<bp){bp=q;hx=t.x+t.w/2;STN.push(t.s)}}));
+  R.forEach(r=>{let bd=1e9;if(hx!=null)r.v.forEach(t=>{const n=/^[\d,]+(\.\d+)?$/.test(t.s)?num(t.s):null,dd=Math.abs(t.x+t.w/2-hx);if(n>0&&dd<bd&&dd<70){bd=dd;r.a=n}})});
+  const AN=R.filter(r=>r.a!=null);
+  R.forEach(r=>{if(r.a==null&&AN.length&&r.v.length&&!r.v.some(t=>hp(t.s)<9)){let b=null,bd=1e9;AN.forEach(q=>{const dd=Math.abs(q.y-r.y);if(dd<bd){bd=dd;b=q}});if(bd<=11){b.v.push(...r.v);r.dead=1}}});
+  R.forEach(r=>{if(!r.dead)o.push({t:r.v.slice().sort((a,b)=>Math.round(a.x)-Math.round(b.x)||a.y-b.y).map(t=>t.s).join(' '),a:r.a})})}
+ return o}
+async function run(){const st=$('#st');st.className='msg';$('#go').disabled=true;
+ try{const E=[];SR=[];st.textContent='Reading every wage sheet…';
+  for(const f of S.w)for(const s of await sheets(f)){const r=emp(s);SR.push({Sheet:s.n,'Employees read':r?r.length:0,Note:r?'':'Skipped, no name / net salary table found',cm:r?r.cm:''});if(r)E.push(...r)}
+  if(!E.length)throw new Error('No sheet with a Name column and a Net Salary column was found in the wage workbook.');
+  let EU=null;if(S.e.length){st.textContent='Reading PF ECR…';EU=new Set();for(const f of S.e)((await lines(f)).join(' ').match(/\b\d{12}\b/g)||[]).forEach(u=>EU.add(u))}
+  let SU=null;if(S.i.length){st.textContent='Reading ESIC file…';SU=new Set();for(const f of S.i)((await lines(f)).join(' ').match(/\b\d{10}\b/g)||[]).forEach(u=>SU.add(u))}
+  let BL=[],BP=[];IMG=[];STN=[];for(const f of S.b){st.textContent='Reading '+f.name+'…';if(/\.(png|jpe?g|webp)$/i.test(f.name))IMG.push(f.name);else{const n=f.name.toLowerCase();let o=[];if(/\.pdf$/.test(n))o=await stP(f);else if(/\.(xlsx|xls|csv)$/.test(n)){for(const sh of await sheets(f))o.push(...stS(sh))}else o=(await lines(f)).map(t=>({t,a:null}));o.forEach(x=>{BL.push(x.t);BP.push(x.a)})}}
+  const BS=BL.map(sq),hasB=BL.length>0,dc={};E.forEach(e=>{if(e.uan)(dc[e.uan]=dc[e.uan]||[]).push(e.sheet)});st.textContent='Matching…';
+  R=E.map(e=>{const x={e,notes:[]};
+   if(dc[e.uan]&&dc[e.uan].length>1)x.notes.push('UAN repeated in: '+dc[e.uan].join(', '));
+   if(EU)x.pf=e.nu?C('wn','Sheet has no UAN column'):!e.uan?C('wn','UAN is blank'):!/^\d{12}$/.test(e.uan)?C('bd','UAN is not 12 digits ('+e.uan+')'):EU.has(e.uan)?C('ok','UAN found in ECR'):C('bd','Missing from ECR');
+   if(SU&&'esn' in e.x){const en=String(e.x.esn).replace(/\.0+$/,'').replace(/\D/g,'');x.es=!en?C('na','No ESIC No (NA), not covered'):en.length!=10?C('bd','ESIC No is not 10 digits ('+en+')'):SU.has(en)?C('ok','ESIC No found in file'):C('bd','Missing from ESIC file')}
+   if(hasB){const b=bank(e,BL,BS,BP);x.bk=b.c;x.amt=b.amt;x.line=b.line;x.d=b.amt==null?null:(d=>Math.abs(d)<=1?0:d)(Math.round((e.net-b.amt)*100)/100)}
+   const a=[x.pf,x.bk,x.es].filter(Boolean);x.f=a.some(c=>c.s=='bd')?'bd':(a.some(c=>c.s=='wn')||x.notes.length)?'wn':'ok';return x});
+  XU=EU?[...EU].filter(u=>!dc[u]):[];XS=SU?[...SU].filter(u=>!E.some(e=>String(e.x.esn||'').replace(/\.0+$/,'').replace(/\D/g,'')==u)):[];comp();draw();st.textContent='Audit complete.'}
+ catch(err){console.error(err);st.className='msg e';st.textContent=err.message||String(err)}
+ $('#go').disabled=false}
+$('#go').onclick=run;
+const MK={ok:'✓',wn:'!',bd:'✕',na:'–'},cell=(c,s)=>c?`<td class="${c.s}"><b class="m">${MK[c.s]}</b>${esc(c.t)}${s?`<small>${esc(s.slice(0,70))}</small>`:''}</td>`:'<td class="na">Not uploaded</td>',
+ dcell=x=>x.d==null?'<td class="na r">–</td>':x.d==0?'<td class="ok r">✓ 0</td>':`<td class="wn r">${x.d>0?'+':''}${x.d.toLocaleString('en-IN')}</td>`;
+function draw(){const cn=(k,s)=>R.filter(x=>x[k]&&x[k].s==s).length,clear=R.filter(x=>x.f=='ok').length,hp=R.some(x=>x.pf),hb=R.some(x=>x.bk);
+ $('#out').innerHTML=`<div class="top3">${RING()}<div class="sum"><div class="sc"><b>${R.length}</b><span>Employees audited</span></div><div class="sc"><b>${clear}</b><span>Clear</span></div><div class="sc"><b>${hp?cn('pf','bd'):'–'}</b><span>${hp?'Missing from PF ECR':'PF ECR not uploaded'}</span></div>${R.some(x=>x.es)?`<div class="sc"><b>${cn('es','bd')}</b><span>Missing from ESIC file</span></div>`:''}<div class="sc"><b>${hb?cn('bk','bd'):'–'}</b><span>${hb?'Name not in bank':'Bank not uploaded'}</span></div></div></div>
+ ${CT()}<div class="card panel"><div class="note">Sheets read: ${SR.map(s=>esc(s.Sheet)+' ('+s['Employees read']+')'+(s.Note?' – '+esc(s.Note):'')).join(' · ')}${SR.some(s=>s.cm)?'<details><summary>Columns detected in the wage sheet</summary>'+SR.filter(s=>s.cm).map(s=>'<div><b>'+esc(s.Sheet)+':</b> '+esc(s.cm)+'</div>').join('')+'</details>':''}${XS.length?`<br>${XS.length} ESIC No(s) in the ESIC file are not in the wage sheet (listed in the Excel report).`:''}${XU.length?`<br>${XU.length} UAN(s) in the ECR are not in the wage sheet (listed in the Excel report; may include the ECR return ID).`:''}${STN.length?'<br>Statement amount column used: '+esc([...new Set(STN)].join(', ')):''}${IMG.length?`<br>${IMG.length} bank image(s) were not read here: ${esc(IMG.join(', '))}. Send them to Claude in chat to have them checked.`:''}</div>
+ <div class="bar">${[['all','All'],['bd','Missing / not found'],['wn','Review'],['ok','Clear']].map(f=>`<button class="chip" data-f="${f[0]}" aria-pressed="${flt==f[0]}">${f[1]}</button>`).join('')}<input id="q" placeholder="Search name or UAN" value="${esc(q)}" aria-label="Search"><button class="dl" id="dl">Download Excel report</button></div>
+ <div class="ts"><table><thead><tr><th>#</th><th>Employee</th><th>Wage sheet Net Salary</th><th>Statement Pay Amount</th><th>Bank name match</th><th>PF ECR</th>${R.some(x=>x.es)?'<th>ESIC</th>':''}<th>Notes</th></tr></thead><tbody id="tb"></tbody></table></div></div>`;
+ document.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{flt=b.dataset.f;document.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed',c==b));rows()});
+ $('#q').oninput=e=>{q=e.target.value;rows()};$('#dl').onclick=dl;rows()}
+function rows(){const k=q.toLowerCase();$('#tb').innerHTML=R.map((x,i)=>[x,i]).filter(([x])=>(flt=='all'||x.f==flt)&&(!k||(x.e.name+x.e.uan).toLowerCase().includes(k))).map(([x,i])=>`<tr><td>${i+1}</td><td>${esc(x.e.name)}<small>${esc(x.e.uan||'no UAN')} · ${esc(x.e.sheet)}</small></td><td class="r">${rs(x.e.net)}</td><td class="r">${x.amt==null?(x.bk&&x.bk.s=='ok'?'amount not read':'–'):rs(x.amt)}</td>${cell(x.bk,x.line)}${cell(x.pf)}${R.some(y=>y.es)?cell(x.es):''}<td>${esc(x.notes.join('; '))}</td></tr>`).join('')||'<tr><td colspan="8" class="na">No employees match this filter.</td></tr>'}
+const ST_={ok:['FFE3F4EC','FF0D7A54'],wn:['FFFFF3D6','FF8A5A00'],bd:['FFFDE6E3','FFB92F23'],na:['FFF3F4F6','FF6B7280']};
+async function xl(){const ym=$('#mo').value||'',PU='FF3B2F7A',LV='FFE9EEFF',now=new Date().toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'}),{c:cc,n:nc,pc}=SC(),clear=R.filter(x=>x.f=='ok').length,HE=R.some(x=>x.es);
+ const wb=new ExcelJS.Workbook();wb.creator='Gaurav Patil';wb.title='AuditSure Payroll Audit Report';
+ const fl=c=>({type:'pattern',pattern:'solid',fgColor:{argb:c}}),bd={style:'thin',color:{argb:'FFD9E0EA'}},BR={top:bd,left:bd,bottom:bd,right:bd},RK={bd:0,wn:1,ok:2},LB={ok:'Clear',wn:'Review',bd:'Action needed'},PS={orientation:'landscape',fitToPage:true,fitToWidth:1,fitToHeight:0};
+ const s1=wb.addWorksheet('Summary',{properties:{tabColor:{argb:'FF8B5CF6'}},views:[{showGridLines:false}],pageSetup:{orientation:'portrait',fitToPage:true,fitToWidth:1,fitToHeight:0}});
+ s1.columns=[{width:40},{width:22},{width:20},{width:40}];
+ s1.mergeCells('A1:D1');const t1=s1.getCell('A1');t1.value='AUDITSURE  |  Payroll Compliance Audit Report';t1.fill=fl(PU);t1.font={bold:true,size:18,color:{argb:'FFFFFFFF'}};t1.alignment={vertical:'middle',indent:1};s1.getRow(1).height=40;
+ s1.mergeCells('A2:D2');const t2=s1.getCell('A2');t2.value='Every wage. Every record. Audit-ready.     Prepared by Gaurav Patil';t2.font={italic:true,color:{argb:PU}};t2.fill=fl(LV);t2.alignment={vertical:'middle',indent:1};s1.getRow(2).height=24;
+ const kv=(r,k,v,st)=>{const a=s1.getCell('A'+r),b=s1.getCell('B'+r);a.value=k;a.font={bold:true};b.value=v;b.alignment={horizontal:'left'};[a,b].forEach(c=>c.border=BR);if(st){b.fill=fl(ST_[st][0]);b.font={bold:true,color:{argb:ST_[st][1]}}}};
+ kv(4,'Wage month',ym);kv(5,'Report date',now);kv(6,'Employees audited',R.length);kv(7,'Clear',clear,'ok');kv(8,'Need attention',R.length-clear,R.length-clear?'bd':'ok');kv(9,'Compliance score',pc+'%  ('+cc+' complied, '+nc+' not complied)',pc>=80?'ok':pc>=60?'wn':'bd');
+ ['Compliance check','Result','Employees listed','ACT'].forEach((h,i)=>{const c=s1.getCell(11,i+1);c.value=h;c.fill=fl(PU);c.font={bold:true,color:{argb:'FFFFFFFF'}};c.border=BR;c.alignment={vertical:'middle',horizontal:'center'}});
+ CR.forEach((r,i)=>{const k=r[4]=='1'?'ok':r[4]=='0'?'bd':'na',row=12+i;[r[2],r[4]=='1'?'Complied':r[4]=='0'?'Not complied':'Not checked',r[6].length,r[1]].forEach((v,j)=>{const c=s1.getCell(row,j+1);c.value=v;c.border=BR;c.alignment={vertical:'top',wrapText:true,horizontal:j==2?'center':'left'};if(j==1){c.fill=fl(ST_[k][0]);c.font={bold:true,color:{argb:ST_[k][1]}}}})});
+ const sheet=(n,tc,cols,rows,fz)=>{const ws=wb.addWorksheet(n,{properties:{tabColor:{argb:tc}},pageSetup:PS});ws.columns=cols.map(c=>({header:c[0],key:c[1],width:c[2]}));
+  const h=ws.getRow(1);h.height=32;h.eachCell(c=>{c.fill=fl(PU);c.font={bold:true,color:{argb:'FFFFFFFF'},size:11};c.alignment={vertical:'middle',horizontal:'center',wrapText:true};c.border=BR});
+  rows.forEach(r=>{const w=ws.addRow(r.v);w.eachCell({includeEmpty:true},(c,i)=>{c.border=BR;c.alignment={vertical:'top',wrapText:true};if(cols[i-1]&&cols[i-1][3]){c.numFmt='#,##0.00';c.alignment={vertical:'top',horizontal:'right'}}});
+   if(r.h)w.eachCell({includeEmpty:true},c=>{c.fill=fl(LV);c.font={bold:true}});
+   for(const k in(r.s||{})){const t=ST_[r.s[k]];if(!t)continue;const c=w.getCell(k);c.fill=fl(t[0]);c.font={color:{argb:t[1]},bold:true}}});
+  ws.views=[{state:'frozen',xSplit:fz||0,ySplit:1}];ws.autoFilter={from:{row:1,column:1},to:{row:1,column:cols.length}};return ws};
+ const cr=[];CR.forEach(r=>{cr.push({h:1,v:{sr:r[0],act:r[1],title:r[2],ob:r[3],sc:r[4]=='NA'?'NA':+r[4],rem:r[5],emp:'',det:''},s:{sc:r[4]=='1'?'ok':r[4]=='0'?'bd':'na'}});r[6].forEach(o=>cr.push({v:{sr:r[0],act:'',title:r[2],ob:'',sc:'',rem:'',emp:o.n,det:o.d}}))});
+ sheet('Compliance Report','FF6366F1',[['Sr. No.','sr',8],['ACT','act',30],['TITLE','title',34],['OBLIGATION','ob',44],['Score','sc',9],['Remarks','rem',42],['Employee name','emp',30],['Details','det',64]],cr,0);
+ const S2=[...R].sort((a,b)=>RK[a.f]-RK[b.f]||String(a.e.sheet).localeCompare(String(b.e.sheet))||a.e.name.localeCompare(b.e.name));
+ const io=S2.filter(x=>x.f!='ok').map((x,i)=>({v:{n:i+1,name:x.e.name,sheet:x.e.sheet,uan:x.e.uan,net:x.e.net,amt:x.amt==null?'':x.amt,pr:x.f=='bd'?'High':'Medium',fix:[x.pf&&x.pf.s!='ok'&&x.pf.t,x.es&&x.es.s!='ok'&&x.es.s!='na'&&x.es.t,x.bk&&x.bk.s!='ok'&&'Bank: '+x.bk.t].concat(x.notes).filter(Boolean).join('\n')},s:{pr:x.f}}));
+ sheet('Issues Only','FFEF4444',[['Sr.','n',6],['Employee','name',30],['Sheet','sheet',18],['UAN','uan',15],['Wage sheet Net','net',15,1],['Statement Net','amt',15,1],['Priority','pr',11],['What to fix','fix',90]],io,2);
+ const ea=S2.map((x,i)=>{const p=x.pi||{},t=x.pti,v={n:i+1,name:x.e.name,sheet:x.e.sheet,uan:x.e.uan,net:x.e.net,amt:x.amt==null?'':x.amt,g:p.G==null?'':p.G,hra:p.hra==null?'':p.hra,att:p.att==null?'':p.att,sb:p.bonus==null?'':p.bonus,ota:p.ota==null?'':p.ota,pw:p.pw==null?'':p.pw,pfd:p.pf==null?'':p.pf,pfx:p.ex==null?'':p.ex,ptd:t?t.ded:'',ptx:t?t.ex:'',ptc:t?(t.ded==t.ex?'OK':'Not OK'):'',pf:x.pf?x.pf.t:'-',bk:x.bk?x.bk.t:'-',nt:x.notes.join('\n'),res:LB[x.f]};if(HE)v.es=x.es?x.es.t:'-';
+  return{v,s:{pf:x.pf&&x.pf.s,es:x.es&&x.es.s,bk:x.bk&&x.bk.s,ptc:t?(t.ded==t.ex?'ok':'bd'):'',res:x.f}}});
+ sheet('Employee Audit','FF10B981',[['Sr.','n',6],['Employee','name',30],['Sheet','sheet',18],['UAN','uan',15],['Wage sheet Net','net',15,1],['Statement Net','amt',15,1],['Gross (earned)','g',14,1],['HRA','hra',11,1],['Attendance Bonus','att',12,1],['Statutory Bonus','sb',12,1],['Total OT','ota',12,1],['PF wages','pw',14,1],['PF deducted','pfd',12,1],['PF should be','pfx',12,1],['PT deducted','ptd',11,1],['PT as per slab','ptx',11,1],['PT check','ptc',10],['PF ECR','pf',26]].concat(HE?[['ESIC file','es',26]]:[],[['Bank name match','bk',24],['Notes / findings','nt',64],['Result','res',16]]),ea,2);
+ if(XU.length||XS.length){const m=Math.max(XU.length,XS.length),ls=[];for(let i=0;i<m;i++)ls.push({v:{u:XU[i]||'',e:XS[i]||''}});sheet('Not In Wage Sheet','FFF59E0B',[['UAN in ECR, not in wage sheet','u',36],['ESIC No in file, not in wage sheet','e',36]],ls,0)}
+ sheet('Sheets Read','FF94A3B8',[['Sheet','sh',30],['Employees read','n',16],['Note','nt',52]],SR.map(x=>({v:{sh:x.Sheet,n:x['Employees read'],nt:x.Note||''}})),0);
+ return wb.xlsx.writeBuffer()}
+async function dl(){const FN='AuditSure_Payroll_Audit_Report.xlsx';let ab;try{ab=new Uint8Array(await xl()).buffer}catch(e){console.error(e);$('#st').className='msg e';$('#st').textContent='Could not build the Excel report: '+(e.message||e);return}
+ let d=null;try{if(window.claude&&window.claude.use)d=await Promise.race([window.claude.use('downloads'),new Promise(r=>setTimeout(()=>r(null),2500))])}catch(e){}
+ if(d){try{await d.save({filename:FN,data:ab});return}catch(e){if(e.code=='declined')return}}
+ const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([ab],{type:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'}));a.download=FN;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},1500)}
+</script></body></html>
